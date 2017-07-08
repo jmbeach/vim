@@ -24,7 +24,7 @@ mingw32-make.exe -f Make_ming.mak PYTHON="C:/Python27" PYTHON_VER=27 DYNAMIC_PYT
 REM --- Build console version (vim.exe) ---
 echo Building vim.exe ...
 REM The following command will compile with both Python 2.7 and Python 3.3
-mingw32-make.exe -f Make_ming.mak PYTHON="C:/Python27" PYTHON_VER=27 DYNAMIC_PYTHON=yes FEATURES=HUGE GUI=no vim.exe >> "%LOGFILE%"
+mingw32-make.exe -f Make_ming.mak PYTHON="C:/Python27" PYTHON_VER=27 DYNAMIC_PYTHON=yes FEATURES=HUGE GUI=no vim.exe TCL="C:/Tcl" TCL_VER=86 TCL_VER_LONG=8.6 DYNAMIC_TCL=yes >> "%LOGFILE%"
 
 echo Moving files ...
 move gvim.exe "%WORKDIR%"
